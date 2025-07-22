@@ -1,0 +1,251 @@
+/* universal Design */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-text-color: #3a3a3a;
+  --secoundary-text-color: #787885;
+  --font-family: "Poppins", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: rgb(255, 255, 255);
+}
+/* shared style  */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ham-menu {
+  display: none;
+}
+/* nav-bar design */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links img {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.nav-links li {
+  font-size: 1.2rem;
+  color: var(--primary-text-color);
+}
+
+.logo {
+  font-size: 1.5 rem;
+  font-weight: 700;
+  color: var(--primary-text-color);
+}
+
+/* hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.hero-info h1 {
+  font-size: 3.2rem;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.hero-info p {
+  font-size: 1rem;
+  color: var(--secoundary-text-color);
+  padding-bottom: 1rem;
+}
+
+.hero-info button {
+  padding: 0.8rem 1.5rem;
+  background-color: #e02c6d;
+  color: white;
+  border: none;
+  border-radius: 41px;
+  font-size: 1rem;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-img {
+  background-image: url("../images/Circle design.svg");
+  background-size: 95%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+/* brands */
+.brads {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4rem;
+  margin-bottom: 6.2rem;
+}
+.brads img {
+  width: 100%;
+  height: 100%;
+  max-width: 84px;
+}
+
+/* collection Design */
+.collection-container {
+  margin-bottom: 2.5rem;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  
+}
+.collection-container h2 {
+  text-align: center;
+}
+
+.reating {
+  display: flex;
+  gap: 10px;
+}
+.popular-collections {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  justify-content: center;
+  place-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.cover-img {
+  width: 100%;
+}
+.collection {
+  max-width: 320px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.collection h3 {
+  font-size: 1.7rem;
+  color: var(--primary-text-color);
+}
+.collection .price {
+  font-size: 1.2rem;
+  color: var(--secoundary-text-color);
+}
+.collection p {
+  font-size: 0.9rem;
+  color: var(--secoundary-text-color);
+  font-size: medium;
+  font-weight: 500;
+}
+.see-more{
+ 
+  color: rgba(224, 44, 109, 0.87);
+  font-size: 1rem;
+  text-align: end;
+  padding: 10px;
+  
+}
+
+/* sub section */
+.subscribe-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 96px;
+}
+.subscribe-container h3{
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
+}
+.subscribe-container p{
+  font-size: 0.9rem;
+  color: var(--secoundary-text-color);
+  padding: 1rem 0;
+}
+.subscribe-container button{
+  padding: 0.8rem 1.5rem;
+  background-color: #e02c6d;
+  color: white;
+  border: none;
+  font-size: 1rem;
+}
+.subscribe-container img{
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* footer section */
+footer{
+  color: white;
+  background-color: rgb(27, 27, 41);
+  margin: 0px auto;
+  padding: 50px 0;
+  margin-top: 100px;
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  
+
+}
+.div-links{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 1rem;
+}
+/* responsive design */
+@media screen and (max-width: 780px) {
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+  .nav-links {
+    display: none;
+  }
+  .ham-menu {
+    display: flex;
+    cursor: pointer;
+  }
+  .brads {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .subscribe-container{
+    flex-direction: column;
+    text-align: center;
+  }
+}
